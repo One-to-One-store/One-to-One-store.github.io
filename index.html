@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>one to one</title>
+<meta name="description" content="one to one — ملابس بمقاسك وألوانك | Clothing, your size, your color">
+<meta property="og:type" content="website"><meta property="og:title" content="one to one"><meta property="og:description" content="اختار القطعة والمقاس واللون واطلب — الدفع كاش عند الاستلام"><meta property="og:image" content="https://one-to-one-store.github.io/logo.jpg"><meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--panel:#fff;--ink:#000;--pri:#000;--acc:#000;--onacc:#fff;--line:#d4d4d4;--soft:#f0f0f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--panel:#111;--ink:#fff;--pri:#000;--acc:#fff;--onacc:#000;--line:#333;--soft:#1c1c1c}}
+:root[data-theme="dark"]{--bg:#000;--panel:#111;--ink:#fff;--pri:#000;--acc:#fff;--onacc:#000;--line:#333;--soft:#1c1c1c}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,sans-serif}
+button{font-family:inherit;cursor:pointer;border:0}
+header{border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--pri);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:1px;direction:ltr}
+.pill{background:rgba(255,255,255,.14);color:#fff;border-radius:99px;padding:8px 14px;font-weight:600;margin-inline-start:6px}
+.banner{background:#0b0b0b;text-align:center}.banner img{display:block;margin:auto;width:100%;max-width:560px}
+.tools{display:flex;gap:8px;padding-top:6px}.tools input{margin:0;flex:1}.tools select{padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:inherit}
+.cimg{width:100%;height:210px;object-fit:cover;border-radius:8px;display:block}#pm{width:100%;height:320px;object-fit:contain;background:var(--soft);border-radius:12px;display:block}.views img.th{flex:1;min-width:0;height:64px;object-fit:cover;border-radius:8px;border:2px solid transparent;cursor:pointer}.views img.th.on{border-color:var(--ink)}
+.sz.out{opacity:.35;text-decoration:line-through;cursor:not-allowed}.box{animation:pop .22s ease}@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}}
+footer{text-align:center;padding:26px 16px calc(26px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);font-size:14px;line-height:2}footer a{color:var(--ink);font-weight:800}
+.ann{background:var(--ink);color:var(--bg);text-align:center;font-size:13px;font-weight:600;padding:7px 10px}
+.slider{position:relative;background:#0b0b0b;color:#fff;overflow:hidden}.sl{display:none;height:340px;animation:fd .6s}.sl.on{display:flex}
+.sl .art{flex:0 0 46%;width:46%;height:100%;padding:26px}.bd{letter-spacing:6px;font-family:Georgia,serif;font-weight:400;direction:ltr}
+.sl img{width:46%;height:100%;object-fit:cover}.slt{flex:1;align-self:center;padding:0 5%}.slt small{opacity:.7;letter-spacing:1px}.slt h2{font-size:clamp(22px,4vw,40px);margin:6px 0}.slt p{font-size:20px;margin:0 0 14px}
+.slt .btn{background:#fff;color:#000}.dots{position:absolute;bottom:10px;inset-inline:0;display:flex;justify-content:center;gap:7px}.dots i{width:8px;height:8px;border-radius:50%;background:#fff5;cursor:pointer}.dots i.on{background:#fff;width:22px;border-radius:9px}
+@keyframes fd{from{opacity:0}}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;padding:14px;border-bottom:1px solid var(--line);font-weight:600;font-size:14px}
+.card{transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px #0002}
+@media(max-width:600px){.sl{height:280px}.slt p{font-size:17px}}
+.hero{text-align:center;padding:34px 16px 12px}.hero h1{margin:0 0 6px;font-size:28px}.hero p{margin:0;opacity:.75}
+.wrap{max-width:1000px;margin:auto;padding:0 16px 50px}
+.cats{display:flex;gap:8px;overflow-x:auto;padding:14px 0}
+.cats button{white-space:nowrap;background:var(--soft);color:var(--ink);padding:9px 18px;border-radius:99px;font-weight:600}
+.cats button.on,.sz.on{background:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer}
+.card .img{background:var(--soft);padding:14px}.card .b{padding:10px 12px}.card b{color:var(--acc)}
+svg.g{width:100%;height:150px;display:block}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:20;display:none;align-items:center;justify-content:center;padding:12px}
+.ov.on{display:flex}
+.box{background:var(--panel);border-radius:16px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:16px}
+.views{display:flex;gap:8px;margin:8px 0}.views button{flex:1;background:var(--soft);border-radius:10px;padding:4px;color:var(--ink);font-size:11px}
+.views button.on{outline:2px solid var(--acc)}.views svg{height:46px;width:100%}
+.opts{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+.sz{min-width:44px;padding:9px;border-radius:10px;background:var(--soft);color:var(--ink);font-weight:700}
+.cl{width:34px;height:34px;border-radius:50%;border:2px solid var(--line)}.cl.on{outline:3px solid var(--acc)}
+.btn{width:100%;padding:12px;border-radius:99px;background:var(--acc);color:var(--onacc);font-weight:800;margin-top:8px}
+.btn.g{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.ask{background:var(--soft);border-radius:12px;padding:12px;margin-top:10px}
+input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:inherit;margin-bottom:8px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+
+header{background:#000e;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.st{max-width:1000px;margin:26px auto 0;padding:0 16px;font-size:22px;font-weight:800}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-width:1000px;margin:12px auto 8px;padding:0 16px}
+.tile{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;cursor:pointer;background:#111}.tile img{width:100%;height:100%;object-fit:cover;transition:transform .45s}.tile:hover img{transform:scale(1.07)}
+.tile span{position:absolute;inset-inline:0;bottom:0;padding:30px 14px 12px;color:#fff;font-weight:800;font-size:18px;background:linear-gradient(transparent,#000b)}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:#0009;color:#fff;font-size:24px;line-height:1}.ar.l{left:10px}.ar.r{right:10px}
+.card{border-radius:16px;overflow:hidden}.card .b{padding:12px 14px 14px}.card .b b{font-size:17px}
+.sw{display:flex;gap:5px;margin-top:7px}.sw i{width:13px;height:13px;border-radius:50%;border:1px solid var(--line)}
+.hero{padding:26px 16px 6px}.hero h1{font-size:24px;letter-spacing:.3px}.cats button{font-weight:700}
+.box{border-radius:20px}.btn{letter-spacing:.2px}
+</style>
+</head>
+<body>
+<div class="ann" id="an"></div>
+<header>
+  <div class="brand"><svg width="44" height="30" viewBox="0 0 44 30"><circle cx="15" cy="15" r="12" fill="none" stroke="#8a8a8a" stroke-width="3"/><circle cx="29" cy="15" r="12" fill="none" stroke="#fff" stroke-width="3"/></svg>one to one</div>
+  <div><button class="pill" id="lg"></button><button class="pill" id="ct"></button></div>
+</header>
+<div class="slider" id="sl"></div><div class="trust" id="tr"></div>
+<h2 class="st" id="stt"></h2><div class="tiles" id="tl"></div>
+<div class="hero"><h1 id="h1"></h1><p id="h2"></p></div>
+<div class="wrap"><div class="tools"><input id="q"><select id="so"><option value="0"></option><option value="1"></option><option value="2"></option></select></div><div class="cats" id="cats"></div><div class="grid" id="grid"></div></div>
+<div class="banner"><img alt="one to one" src="images/brand.jpg"></div>
+<footer><div id="f1"></div><a id="f2" href="https://wa.me/201128181698" target="_blank" rel="noopener noreferrer"></a></footer>
+<div class="ov" id="ov"><div class="box" id="bx"></div></div>
+<script id="data" type="application/json">[{"id": 11, "k": "hd", "n": ["هودي Lil Rebel", "Lil Rebel Hoodie"], "p": 690, "c": [1, 7, 6], "s": ["M", "L", "XL", "2XL"], "d": ["هودي شتوي بقلاب وجيب أمامي، بطبعة مطرزة Lil Rebel على الضهر والقلاب", "Winter hoodie with a hood and front pocket, embroidered Lil Rebel print on the back and hood"], "o": [], "im": {"1": ["images/p11-1-0.jpg", "images/p11-1-1.jpg"], "7": ["images/p11-7-0.jpg", "images/p11-7-1.jpg", "images/p11-7-2.jpg"], "6": ["images/p11-6-0.jpg", "images/p11-6-1.jpg"]}}, {"id": 12, "k": "jk", "n": ["جاكيت بومبر", "Bomber Jacket"], "p": 1230, "c": [9, 8, 1], "s": ["M", "L", "XL", "2XL"], "d": ["جاكيت بومبر بياقة وأزرار ضغط وجيوب جانبية، وأستك عند الوسط والأكمام", "Bomber jacket with a collar, snap buttons, side pockets and elastic hem and cuffs"], "o": [], "im": {"9": ["images/p12-9-0.jpg", "images/p12-9-1.jpg"], "8": ["images/p12-8-0.jpg", "images/p12-8-1.jpg"], "1": ["images/p12-1-0.jpg"]}}, {"id": 13, "k": "hd", "n": ["هودي بسوستة", "Zip Hoodie"], "p": 850, "c": [9], "s": ["M", "L", "XL", "2XL"], "d": ["هودي بني بسوستة كاملة وقلاب وجيب أمامي", "Brown zip-up hoodie with a hood and a front pocket"], "o": [], "im": {"9": ["images/p13-9-0.jpg", "images/p13-9-1.jpg", "images/p13-9-2.jpg"]}}, {"id": 14, "k": "sw", "n": ["سويت شيرت Angel Boy", "Angel Boy Sweatshirt"], "p": 575, "c": [7, 1, 8], "s": ["M", "L", "XL", "2XL"], "d": ["سويت شيرت بياقة دائرية وجيب أمامي، بتطريز Angel Boy على الضهر والصدر", "Crew-neck sweatshirt with a front pocket and Angel Boy embroidery on the back and chest"], "o": [], "im": {"7": ["images/p14-7-0.jpg", "images/p14-7-1.jpg"], "8": ["images/p14-8-0.jpg"], "1": ["images/p14-1-0.jpg"]}}, {"id": 15, "k": "jk", "n": ["جاكيت رياضي بسوستة", "Zip Track Jacket"], "p": 1170, "c": [0, 1, 10], "s": ["M", "L", "XL", "2XL"], "d": ["جاكيت بسوستة وياقة عالية وجيوب جانبية بتصميم كتل ألوان، وأستك عند الوسط والأكمام", "Zip-up jacket with a high collar, side pockets and a color-block design, with elastic hem and cuffs"], "o": [], "im": {"0": ["images/p15-0-0.jpg", "images/p15-0-1.jpg"], "1": ["images/p15-1-0.jpg", "images/p15-1-1.jpg"], "10": ["images/p15-10-0.jpg"]}}, {"id": 16, "k": "p", "n": ["بنطلون سويت شتوي", "Winter Sweatpants"], "p": 682, "c": [7, 1, 9, 10], "s": ["M", "L", "XL", "2XL"], "d": ["بنطلون سويت بخصر أستك وحبل ربط وجيوب جانبية وخياطة منحنية", "Sweatpants with an elastic drawstring waist, side pockets and curved seams"], "o": [], "im": {"7": ["images/p16-7-0.jpg", "images/p16-7-1.jpg"], "1": ["images/p16-7-1.jpg", "images/p16-1-1.jpg"], "9": ["images/p16-9-0.jpg", "images/p16-9-1.jpg"]}}, {"id": 17, "k": "jk", "n": ["جاكيت شتوي بسوستة", "Zip Winter Jacket"], "p": 1295, "c": [10, 3, 11], "s": ["M", "L", "XL", "2XL"], "d": ["جاكيت بياقة وسوستة وجيوب جانبية بخامة بوبرة ناعمة، وأستك عند الوسط", "Zip-up jacket with a collar, side pockets and a soft textured fabric, with an elastic hem"], "o": [], "im": {"10": ["images/p17-10-0.jpg"], "3": ["images/p17-3-0.jpg"], "11": ["images/p17-11-0.jpg"]}}]</script>
+<script>
+const WA="201128181698",SHIP=100; // رقم واتساب صاحب المتجر بصيغة دولية بدون +
+const T={ar:{h1:"أسلوبك، مقاسك، اختيارك",h2:"اختار القطعة والمقاس واللون واطلب — الدفع كاش عند الاستلام",all:"الكل",t:"تيشيرتات",p:"بناطيل",s:"قمصان",cur:"ج.م",shopBy:"تسوق حسب الصنف",bn1s:"ملابس بمقاسك واختيارك",bn2t:"تشكيلة الشتاء",bn2s:"هوديز وجاكيتات بدفا وستايل",bn3t:"وصل حديثاً",bn3s:"جاكيت بومبر بـ 3 ألوان",bn4t:"اطلب بسهولة",bn4s:"اختار، اطلب على واتساب، وادفع عند الاستلام",winter:"تشكيلة الشتاء",shop:"تسوق الآن",tr1:"🚚 توصيل خلال 3 أيام عمل",tr2:"💵 الدفع عند الاستلام",tr3:"💬 دعم مباشر على واتساب",sw:"سويت شيرت",hd:"هودي",kn:"بلوفر",jk:"جاكيت",chart:"📏 جدول المقاسات",approx:"القياسات تقريبية بالسنتيمتر",chestL:"عرض الصدر",waistL:"الخصر",lenL:"الطول",shipNote:"الشحن 100 ج.م · التوصيل خلال 3 أيام عمل",cod:"الدفع كاش عند الاستلام",out:"نفد",sub:"المجموع الفرعي",shipL:"الشحن",search:"ابحث عن منتج...",sort:["الترتيب","الأرخص أولاً","الأغلى أولاً"],none:"مفيش نتائج",wa:"تواصل معنا على واتساب",size:"المقاس",color:"اللون",cart:"السلة",lang:"English",
+views:["أمامي","خلفي","جانبي","تفاصيل"],ask:"تمام، اخترت مقاس {s}. تحب تطلب القطعة دي بس ولا تكمل تتفرج على باقي الموديلات؟",only:"اطلب دي بس",more:"أضفها وكمّل فرجة",close:"إغلاق",empty:"السلة فاضية",total:"الإجمالي",go:"إتمام الطلب",name:"الاسم",phone:"رقم الموبايل",addr:"العنوان بالتفصيل",send:"إرسال الطلب على واتساب",pick:"اختار المقاس الأول",added:"اتضافت للسلة ✓",fill:"اكمل البيانات",rm:"حذف"},
+en:{h1:"Your style, your size, your choice",h2:"Pick the piece, size and color, then order — cash on delivery",all:"All",t:"T-Shirts",p:"Pants",s:"Shirts",cur:"EGP",shopBy:"Shop by category",bn1s:"Clothing made your way",bn2t:"Winter Collection",bn2s:"Hoodies & jackets, warm and stylish",bn3t:"New Arrivals",bn3s:"Bomber jacket in 3 colors",bn4t:"Order with ease",bn4s:"Choose, order on WhatsApp, pay on delivery",winter:"Winter Collection",shop:"Shop now",tr1:"🚚 Delivery in 3 working days",tr2:"💵 Cash on delivery",tr3:"💬 Live support on WhatsApp",sw:"Sweatshirts",hd:"Hoodies",kn:"Knitwear",jk:"Jackets",chart:"📏 Size chart",approx:"Approximate measurements in cm",chestL:"Chest width",waistL:"Waist",lenL:"Length",shipNote:"Shipping 100 EGP · Delivery within 3 working days",cod:"Cash on delivery",out:"Sold out",sub:"Subtotal",shipL:"Shipping",search:"Search products...",sort:["Sort","Price: low to high","Price: high to low"],none:"No results",wa:"Chat with us on WhatsApp",size:"Size",color:"Color",cart:"Cart",lang:"العربية",
+views:["Front","Back","Side","Detail"],ask:"Nice, size {s} selected. Order just this piece, or keep browsing the other models?",only:"Order this only",more:"Add it & keep browsing",close:"Close",empty:"Your cart is empty",total:"Total",go:"Checkout",name:"Name",phone:"Mobile number",addr:"Full address",send:"Send order on WhatsApp",pick:"Pick a size first",added:"Added to cart ✓",fill:"Please fill in all fields",rm:"Remove"}};
+const C=[['#f4f1ea','أبيض','White'],['#1e2a22','أسود','Black'],['#c68a2e','خردلي','Mustard'],['#33553f','أخضر','Green'],['#4a6a8a','أزرق','Blue'],['#c9b79c','بيج','Beige'],['#c0392b','أحمر','Red'],['#d9d9d9','رمادي فاتح','Light Gray'],['#6b1f3a','نبيتي','Burgundy'],['#4b2e25','بني','Brown'],['#7c7f88','رمادي','Gray'],['#1b2540','كحلي','Navy']];
+let P;
+const SL="M30 12L42 8Q50 18 58 8L70 12L94 70L82 76L72 44V90H28V44L18 76L6 70Z";
+const X={s:'<path d="M50 14V94" stroke="#0004" stroke-width="1.5"/>',t:'<path d="M42 8Q50 22 58 8" fill="none" stroke="#0004" stroke-width="2"/>',sw:'<path d="M42 8Q50 20 58 8M28 80H72" fill="none" stroke="#0004" stroke-width="2"/>',hd:'<path d="M36 10Q50 0 64 10Q60 28 50 30Q40 28 36 10ZM36 62H64L66 80H34Z" fill="none" stroke="#0004" stroke-width="2"/>',jk:'<path d="M50 14V92M32 62H44M56 62H68" stroke="#0004" stroke-width="2"/>',kn:'<path d="M42 8Q50 20 58 8M28 82H72M28 76H72" fill="none" stroke="#0004" stroke-width="1.5"/>'};
+const G={sw:SL,hd:SL,kn:SL,jk:"M28 12L42 8L50 14L58 8L72 12L94 66L82 72L72 40V92H28V40L18 72L6 66Z",t:"M30 12L42 8Q50 16 58 8L70 12L92 30L82 44L72 38V92H28V38L18 44L8 30Z",p:"M28 8H72L76 92H54L50 40L46 92H24Z",s:"M30 10L42 6L50 14L58 6L70 10L94 66L82 72L72 40V94H28V40L18 72L6 66Z"};
+let L=localStorage.getItem('o2o-lang')||'ar',cat='all',cart=[],sel=null,qs='',so=0;
+try{L=localStorage.getItem('o2o-lang')||'ar'}catch(e){}
+const $=i=>document.getElementById(i),t=k=>T[L][k];
+P=JSON.parse($('data').textContent);
+const CH={sw:{S:[56,68],M:[59,70],L:[62,72],XL:[65,74],'2XL':[68,76]},hd:{S:[56,68],M:[59,70],L:[62,72],XL:[65,74],'2XL':[68,76]},jk:{S:[58,68],M:[61,70],L:[64,72],XL:[67,74],'2XL':[70,76]},kn:{S:[54,66],M:[57,68],L:[60,70],XL:[63,72]},t:{S:[54,70],M:[57,72],L:[60,74],XL:[63,76]},s:{S:[52,72],M:[55,74],L:[58,76],XL:[61,78]},p:{M:[80,100],L:[85,102],XL:[90,104],'2XL':[95,106],'30':[76,100],'32':[81,102],'34':[86,104],'36':[91,106]}};
+function chartHtml(p){const c=CH[p.k],h=p.k=='p'?t('waistL'):t('chestL');
+  const r=p.s.filter(z=>c&&c[z]).map(z=>`<tr><td><b>${z}</b></td><td>${c[z][0]}</td><td>${c[z][1]}</td></tr>`).join('');
+  return `<div class="ask" style="margin:0 0 10px"><table style="width:100%;text-align:center;border-collapse:collapse"><tr><th>${t('size')}</th><th>${h}</th><th>${t('lenL')}</th></tr>${r}</table><small>${t('approx')}</small></div>`}
+const nm=p=>p.n[L=='ar'?0:1],cn=i=>C[i][L=='ar'?1:2];
+function garment(k,col,v,cls){
+  const tf=v==2?'translate(22 0) scale(.55 1)':v==3?'translate(-30 -30) scale(1.6)':'';
+  const extra=v==1?'':(X[k]||'');
+  return `<svg class="${cls||'g'}" viewBox="0 0 100 100"><g transform="${tf}"><path d="${G[k]}" fill="${col}" stroke="#0005" stroke-width="1.5"/>${extra}</g></svg>`;
+}
+function draw(){
+  document.documentElement.lang=L;document.documentElement.dir=L=='ar'?'rtl':'ltr';
+  $('h1').textContent=t('h1');$('h2').textContent=t('h2');$('lg').textContent=t('lang');
+  $('ct').textContent='🛍️ '+t('cart')+' ('+cart.reduce((a,c)=>a+c.q,0)+')';
+  $('cats').innerHTML=['all','t','p','s','sw','hd','kn','jk'].filter(k=>k=='all'||P.some(p=>p.k==k)).map(k=>`<button class="${k==cat?'on':''}" onclick="cat='${k}';draw()">${t(k)}</button>`).join('');
+  $('q').placeholder=t('search');[...$('so').options].forEach((o,i)=>o.textContent=t('sort')[i]);
+  $('f1').textContent=t('shipNote')+' · '+t('cod');$('an').textContent='🚚 '+t('shipNote')+' · '+t('cod');$('tr').innerHTML=['tr1','tr2','tr3'].map(k=>`<span>${t(k)}</span>`).join('');drawSlider();$('stt').textContent=t('shopBy');$('tl').innerHTML=['hd','sw','jk','p','t','s','kn'].filter(k=>P.some(p=>p.k==k&&p.im)).map(k=>{const p=P.find(p=>p.k==k&&p.im);return `<div class="tile" onclick="go('${k}')"><img src="${p.im[p.c[0]][0]}" alt="" loading="lazy"><span>${t(k)}</span></div>`}).join('');$('f2').innerHTML='💬 '+t('wa')+' <span dir="ltr">01128181698</span>';
+  const R=P.filter(p=>(cat=='all'||p.k==cat)&&(!qs||(p.n[0]+' '+p.n[1]).toLowerCase().includes(qs)));
+  if(so==1)R.sort((a,b)=>a.p-b.p);if(so==2)R.sort((a,b)=>b.p-a.p);
+  $('grid').innerHTML=R.length?R.map(p=>`<div class="card" onclick="openP(${p.id})"><div class="img">${p.im?`<img class="cimg" src="${p.im[p.c[0]][0]}" alt="" loading="lazy">`:garment(p.k,C[p.c[0]][0],0)}</div><div class="b">${nm(p)}<br><b>${p.p} ${t('cur')}</b><div class="sw">${p.c.map(i=>`<i style="background:${C[i][0]}"></i>`).join('')}</div>${p.s.every(z=>(p.o||[]).includes(z))?'<br><small>'+t('out')+'</small>':''}</div></div>`).join(''):`<p>${t('none')}</p>`;
+}
+function openP(id){sel={p:P.find(x=>x.id==id),c:0,s:null,v:0,ask:false};showP();$('ov').classList.add('on')}
+function media(p,c,v,col){
+  const ph=p.im&&p.im[p.c[c]];
+  if(ph){const i=Math.min(v,ph.length-1);return `<img id="pm" src="${ph[i]}" alt=""><div class="views">${ph.map((u,j)=>`<img class="th ${j==i?'on':''}" src="${u}" alt="" onclick="sel.v=${j};showP()">`).join('')}</div>`}
+  return `<div style="background:var(--soft);border-radius:12px;padding:10px">${garment(p.k,col,v,'g" style="height:230px')}</div><div class="views">${t('views').map((x,i)=>`<button class="${i==v?'on':''}" onclick="sel.v=${i};showP()">${garment(p.k,col,i,'g')}${x}</button>`).join('')}</div>`}
+function showP(){
+  const{p,c,s,v,ask}=sel,col=C[p.c[c]][0];
+  $('bx').innerHTML=`<h3 style="margin:0 0 4px">${nm(p)} — ${p.p} ${t('cur')}</h3><p style="margin:0 0 6px;opacity:.8;font-size:14px">${(p.d||['',''])[L=='ar'?0:1]}</p><small style="display:block;margin-bottom:8px">🚚 ${t('shipNote')}</small>
+  ${media(p,c,v,col)}
+  <b>${t('color')}: ${cn(p.c[c])}</b><div class="opts">${p.c.map((ci,i)=>`<button class="cl ${i==c?'on':''}" style="background:${C[ci][0]}" onclick="sel.c=${i};sel.v=0;showP()"></button>`).join('')}</div>
+  <b>${t('size')}</b><div class="opts">${p.s.map(z=>{const o=(p.o||[]).includes(z);return `<button class="sz ${z==s?'on':''} ${o?'out':''}" ${o?'disabled title="'+t('out')+'"':''} onclick="sel.s='${z}';sel.ask=true;showP()">${z}</button>`}).join('')}</div>
+  <button class="btn g" style="margin:0 0 8px;padding:8px" onclick="sel.chart=!sel.chart;showP()">${t('chart')}</button>${sel.chart?chartHtml(p):''}
+  ${ask?`<div class="ask">${t('ask').replace('{s}',s)}<button class="btn" onclick="addC(true)">${t('only')}</button><button class="btn g" onclick="addC(false)">${t('more')}</button></div>`:''}
+  <button class="btn g" onclick="$('ov').classList.remove('on')">${t('close')}</button>`;
+}
+function addC(now){
+  const{p,c,s}=sel,i=cart.find(x=>x.id==p.id&&x.c==p.c[c]&&x.s==s);
+  if(i)i.q++;else cart.push({id:p.id,c:p.c[c],s,q:1});
+  draw();if(now)showCart();else $('ov').classList.remove('on');
+}
+function total(){return cart.reduce((a,x)=>a+P.find(p=>p.id==x.id).p*x.q,0)}
+function showCart(){
+  $('ov').classList.add('on');
+  $('bx').innerHTML=`<h3 style="margin:0">🛍️ ${t('cart')}</h3>`+(cart.length?cart.map((x,i)=>{const p=P.find(q=>q.id==x.id);return`<div class="row"><span>${x.q}× ${nm(p)}<br><small>${t('size')} ${x.s} · ${cn(x.c)}</small></span><span>${p.p*x.q} ${t('cur')}<br><a href="#" onclick="cart.splice(${i},1);draw();showCart();return false">${t('rm')}</a></span></div>`}).join('')+`<p style="margin:8px 0 2px">${t('sub')}: ${total()} ${t('cur')}<br>${t('shipL')}: ${SHIP} ${t('cur')}</p><p style="margin:2px 0"><b>${t('total')}: ${total()+SHIP} ${t('cur')}</b></p><small>🚚 ${t('shipNote')}</small>
+  <input id="n" placeholder="${t('name')}"><input id="ph" placeholder="${t('phone')}"><textarea id="ad" placeholder="${t('addr')}"></textarea>
+  <button class="btn" onclick="send()">${t('send')}</button>`:`<p>${t('empty')}</p>`)+`<button class="btn g" onclick="$('ov').classList.remove('on')">${t('close')}</button>`;
+}
+function send(){
+  const n=$('n').value.trim(),ph=$('ph').value.trim(),ad=$('ad').value.trim();
+  if(!n||!ph||!ad){alert(t('fill'));return}
+  const lines=cart.map(x=>{const p=P.find(q=>q.id==x.id);return`${x.q}x ${p.n[1]} | ${x.s} | ${C[x.c][2]} | ${p.p*x.q}`});
+  const msg=`one to one - New order\n${lines.join('\n')}\nSubtotal: ${total()} EGP\nShipping: ${SHIP} EGP\nTotal: ${total()+SHIP} EGP\nName: ${n}\nPhone: ${ph}\nAddress: ${ad}`;
+  const u='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+  $('bx').innerHTML=`<h3 style="margin:0 0 8px">✅ ${L=='ar'?'الطلب جاهز':'Order ready'}</h3>
+  <a class="btn" style="display:block;text-align:center;text-decoration:none" href="${u}" target="_blank" rel="noopener noreferrer">${L=='ar'?'افتح واتساب وابعت الطلب':'Open WhatsApp & send'}</a>
+  <p style="font-size:13px">${L=='ar'?'لو واتساب مفتحش، انسخ الرسالة دي وابعتها على الرقم':'If WhatsApp does not open, copy this message and send it to'} <b dir="ltr">0${WA.slice(2)}</b></p>
+  <textarea id="mg" readonly rows="7" onclick="this.select()">${msg}</textarea>
+  <button class="btn g" onclick="var m=$('mg');m.select();try{navigator.clipboard.writeText(m.value)}catch(e){document.execCommand('copy')}">${L=='ar'?'نسخ الرسالة':'Copy message'}</button>
+  <button class="btn g" onclick="$('ov').classList.remove('on')">${t('close')}</button>`;
+}
+$('lg').onclick=()=>{L=L=='ar'?'en':'ar';try{localStorage.setItem('o2o-lang',L)}catch(e){}draw();if($('ov').classList.contains('on'))sel&&document.querySelector('.views')?showP():showCart()};
+let si=0,sn=0;
+const BN=[['brand','','bn1s','all'],['hd','bn2t','bn2s','hd'],['jk','bn3t','bn3s','jk'],['s','bn4t','bn4s','all']];
+function stp(d){si=(si+d+sn)%sn;drawSlider()}
+function go(k){cat=k;draw();$('cats').scrollIntoView({behavior:'smooth'})}
+function art(k){
+  if(k=='brand')return `<svg class="art" viewBox="0 0 100 60"><circle cx="38" cy="30" r="22" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="62" cy="30" r="22" fill="none" stroke="#888" stroke-width="1.6"/></svg>`;
+  return `<svg class="art" viewBox="0 0 100 100"><path d="${G[k]}" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="${G[k]}" fill="none" stroke="#fff" stroke-width=".6" stroke-dasharray="1.5 2" opacity=".7" transform="translate(50 50) scale(.9) translate(-50 -50)"/></svg>`}
+function drawSlider(){
+  const pr=id=>{const p=P.find(x=>x.id==id&&x.im);return p?{p}:null},b=i=>({b:BN[i]});
+  const S=[b(0),b(1),pr(13),b(2),pr(12),b(3),pr(11)].filter(Boolean);sn=S.length;if(si>=sn)si=0;
+  $('sl').innerHTML=S.map((x,i)=>{
+    const on=i==si?'on':'';
+    if(x.b){const[k,a,c,g]=x.b;return `<div class="sl ${on}">${art(k)}<div class="slt"><small>one to one</small><h2 class="${k=='brand'?'bd':''}">${k=='brand'?'ONE TO ONE':t(a)}</h2><p>${t(c)}</p><button class="btn" style="width:auto;padding:10px 26px" onclick="go('${g}')">${t('shop')}</button></div></div>`}
+    const p=x.p;return `<div class="sl ${on}"><img src="${p.im[p.c[0]][0]}" alt=""><div class="slt"><small>${t('winter')}</small><h2>${nm(p)}</h2><p>${p.p} ${t('cur')}</p><button class="btn" style="width:auto;padding:10px 26px" onclick="openP(${p.id})">${t('shop')}</button></div></div>`}).join('')+`<div class="dots">${S.map((_,k)=>`<i class="${k==si?'on':''}" onclick="si=${k};drawSlider()"></i>`).join('')}</div><button class="ar l" onclick="stp(document.documentElement.dir=='rtl'?1:-1)">‹</button><button class="ar r" onclick="stp(document.documentElement.dir=='rtl'?-1:1)">›</button>`;
+}
+setInterval(()=>{if(sn>1&&!$('ov').classList.contains('on')){si=(si+1)%sn;drawSlider()}},5000);
+$('ct').onclick=showCart;
+$('q').oninput=e=>{qs=e.target.value.trim().toLowerCase();draw()};$('so').onchange=e=>{so=+e.target.value;draw()};
+$('ov').onclick=e=>{if(e.target.id=='ov')$('ov').classList.remove('on')};
+const esc=x=>String(x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+async function pub(){
+  try{
+    const a=await window.claude.use('artifact');
+    const d=document.documentElement.cloneNode(true);
+    d.setAttribute('lang','ar');d.setAttribute('dir','rtl');
+    d.querySelector('#data').textContent=JSON.stringify(P).replace(/</g,'\\u003c');
+    ['cats','grid','bx','lg','ct','h1','h2'].forEach(i=>d.querySelector('#'+i).textContent='');
+    d.querySelector('#ov').className='ov';
+    const ad=d.querySelector('#adm');if(ad)ad.remove();
+    await a.publish('<!DOCTYPE html>\n'+d.outerHTML);
+  }catch(e){alert('تعذر الحفظ: '+(e.code||e.message))}
+}
+function showAdmin(){
+  $('ov').classList.add('on');
+  $('bx').innerHTML=`<h3 style="margin:0 0 8px">⚙️ إدارة المنتجات</h3><button class="btn" onclick="editP(0)">+ إضافة منتج</button>`+P.map(p=>`<div class="row"><span>${esc(p.n[0])}<br><small>${p.p} ج.م · ${T.ar[p.k]}</small></span><span><button class="sz" onclick="editP(${p.id})">✏️</button> <button class="sz" onclick="delP(${p.id})">🗑️</button></span></div>`).join('')+`<button class="btn g" onclick="$('ov').classList.remove('on')">إغلاق</button>`;
+}
+function editP(id){
+  const p=P.find(x=>x.id==id)||{id:0,k:'t',n:['',''],p:'',c:[],s:[]};
+  $('bx').innerHTML=`<h3 style="margin:0 0 8px">${id?'تعديل منتج':'منتج جديد'}</h3>
+  <input id="a1" placeholder="الاسم بالعربي" value="${esc(p.n[0])}"><input id="a2" placeholder="Name in English" dir="ltr" value="${esc(p.n[1])}"><input id="a3" type="number" placeholder="السعر بالجنيه" value="${p.p}">
+  <select id="a4" style="width:100%;padding:10px;margin-bottom:8px;border-radius:10px">${['t','p','s','sw','hd','kn','jk'].map(k=>`<option value="${k}" ${k==p.k?'selected':''}>${T.ar[k]}</option>`).join('')}</select>
+  <input id="a5" placeholder="المقاسات مفصولة بفاصلة: S, M, L" dir="ltr" value="${esc(p.s.join(', '))}">
+  <b>الألوان المتاحة</b><div class="opts">${C.map((c,i)=>`<button class="cl ${p.c.includes(i)?'on':''}" data-i="${i}" style="background:${c[0]}" title="${c[1]}" onclick="this.classList.toggle('on')"></button>`).join('')}</div>
+  <button class="btn" onclick="saveP(${p.id})">حفظ</button><button class="btn g" onclick="showAdmin()">رجوع</button>`;
+}
+async function saveP(id){
+  const n=[$('a1').value.trim(),$('a2').value.trim()],pr=parseFloat($('a3').value),k=$('a4').value;
+  const s=$('a5').value.split(',').map(x=>x.trim()).filter(Boolean);
+  const c=[...document.querySelectorAll('#bx .cl.on')].map(b=>+b.dataset.i);
+  if(!n[0]||!n[1]||isNaN(pr)||!s.length||!c.length){alert('اكمل كل البيانات: الاسمين والسعر والمقاسات ولون واحد على الأقل');return}
+  if(id){Object.assign(P.find(x=>x.id==id),{n,p:pr,k,s,c})}else{P.push({id:Math.max(0,...P.map(x=>x.id))+1,k,n,p:pr,c,s})}
+  draw();showAdmin();await pub();
+}
+async function delP(id){
+  if(!confirm('متأكد إنك عايز تحذف المنتج ده؟'))return;
+  P=P.filter(x=>x.id!=id);draw();showAdmin();await pub();
+}
+(async()=>{try{const u=await window.claude.use('user');if(u&&await u.isOwner()){const b=document.createElement('button');b.className='pill';b.id='adm';b.textContent='⚙️';b.onclick=showAdmin;$('ct').before(b)}}catch(e){}})();
+draw();
+</script>
+</body>
+</html>
