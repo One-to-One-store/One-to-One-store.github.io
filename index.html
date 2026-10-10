@@ -64,6 +64,15 @@ header{background:#000e;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8
 .sw{display:flex;gap:5px;margin-top:7px}.sw i{width:13px;height:13px;border-radius:50%;border:1px solid var(--line)}
 .hero{padding:26px 16px 6px}.hero h1{font-size:24px;letter-spacing:.3px}.cats button{font-weight:700}
 .box{border-radius:20px}.btn{letter-spacing:.2px}
+
+.wrap,.tiles,.st{max-width:1180px}
+.grid{grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+.cimg{height:auto;aspect-ratio:3/4}
+.sl{padding-inline:max(0px,calc((100vw - 1100px)/2))}
+.sl .art{padding:30px}
+@media(max-width:600px){header{padding:8px 10px}.brand{font-size:16px;white-space:nowrap;gap:6px}.brand svg{width:34px;height:24px}.pill{padding:6px 10px;font-size:12.5px;margin-inline-start:4px;white-space:nowrap}.grid{gap:10px}.card .b{padding:10px}.card .b b{font-size:15px}.card .b{font-size:14px}}
 </style>
 </head>
 <body>
